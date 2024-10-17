@@ -1,0 +1,58 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: ADMINSERVICE
+          uri: lb://ADMINSERVICE
+          predicates:
+            - Path=/api/admin/**, /auth/admin/**
+#          filters:
+#            - name: DedupeResponseHeader
+#              args:
+#                name: Access-Control-Allow-Credentials
+#                strategy: RETAIN_UNIQUE
+
+        - id: USERSERVICE
+          uri: lb://USERSERVICE
+          predicates:
+            - Path=/api/users/**, /auth/user/**
+
+        - id: PARTNERSERVICE
+          uri: lb://PARTNERSERVICE
+          predicates:
+            - Path=/api/partners/**, /auth/partner/**
+
+        - id: CARTSERVICE
+          uri: lb://CARTSERVICE
+          predicates:
+            - Path=/api/cart/**
+
+        - id: MEALSERVICE
+          uri: lb://MEALSERVICE
+          predicates:
+            - Path=/api/meals/**
+
+        - id: ORDERSERVICE
+          uri: lb://ORDERSERVICE
+          predicates:
+            - Path=/api/orders/**
+
+        - id: RATINGSERVICE
+          uri: lb://RATINGSERVICE
+          predicates:
+            - Path=/api/ratings/**
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    server-url:
+      defaultZone: http://localhost:8761/eureka

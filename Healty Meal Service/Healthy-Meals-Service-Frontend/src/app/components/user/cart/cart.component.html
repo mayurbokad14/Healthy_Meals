@@ -1,0 +1,72 @@
+<div class="container cart-page mt-4">
+    <div class="row">
+      <!-- Meal Cards Section -->
+      <div class="col-md-8">
+        <div class="card mb-3 shadow-sm meal-card" *ngFor="let meal of cart.meals">
+          <div class="row g-0">
+            <!-- Meal Image -->
+            <div class="col-md-4 image-container">
+              <img [src]="meal.imageUrl || 'https://via.placeholder.com/150'" class="img-fluid rounded-start" alt="Meal Image">
+            </div>
+  
+            <!-- Meal and Partner Details -->
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h5 class="card-title">{{ meal.mealName }}</h5>
+                    <p class="card-text small mb-1">{{ meal.description }}</p>
+  
+                    <!-- Meal Category Badge -->
+                    <p class="mb-2">
+                      <span class="badge" [ngClass]="{
+                        'bg-success': meal.category === 'veg',
+                        'bg-danger': meal.category === 'non-veg',
+                        'bg-warning': meal.category === 'vegan'
+                      }">
+                        {{ meal.category }}
+                      </span>
+                    </p>
+  
+                    <!-- Partner Information -->
+                    <p class="small mb-2 text-muted">Restaurant: {{ meal.partnerName }}</p>
+                  </div>
+  
+                  <!-- Meal Price -->
+                  <div>
+                    <h5 class="text-primary">{{ meal.price | currency }}</h5>
+                  <button class="btn btn-danger mt-2" (click)="removeMeal(meal.mealId)">
+                    <i class="fa fa-trash"></i> Remove
+                  </button>
+                  </div>
+                </div>
+  
+                <!-- Quantity control -->
+                <!-- <div class="input-group quantity-control">
+                  <button class="btn btn-outline-secondary btn-sm" (click)="decreaseQuantity(meal.mealId)">-</button>
+                  <input type="text" class="form-control" [value]="meal.quantity" readonly>
+                  <button class="btn btn-outline-secondary btn-sm" (click)="increaseQuantity(meal.mealId)">+</button>
+                </div> -->
+  
+                <!-- Remove Button -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Cart Summary Section -->
+      <div class="col-md-4">
+        <div class="card summary-card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Cart Summary</h4>
+            <hr>
+            <p class="card-text">Total Price: <strong>{{ totalPrice | currency }}</strong></p>
+            <button class="btn btn-success w-100" (click)="orderNow()">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

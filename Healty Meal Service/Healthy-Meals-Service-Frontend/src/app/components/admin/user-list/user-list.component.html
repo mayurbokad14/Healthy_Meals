@@ -1,0 +1,50 @@
+<main class="table" id="users_table">
+    <section class="table__header">
+      <h1>User Table</h1>
+    </section>
+    <section class="table__body">
+      <table>
+        <thead>
+          <tr>
+            <th (click)="sortData('userId')">User ID 
+              <span class="icon-arrow">{{ sortBy === 'userId' ? (sortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+            </th>
+            <th (click)="sortData('username')">Username 
+              <span class="icon-arrow">{{ sortBy === 'username' ? (sortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+            </th>
+            <th (click)="sortData('userEmail')">Email 
+              <span class="icon-arrow">{{ sortBy === 'userEmail' ? (sortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+            </th>
+            <th (click)="sortData('phoneNumber')">Phone 
+              <span class="icon-arrow">{{ sortBy === 'phoneNumber' ? (sortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+            </th>
+            <th (click)="sortData('createdAt')">Created At 
+              <span class="icon-arrow">{{ sortBy === 'createdAt' ? (sortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+            </th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.userId }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.userEmail }}</td>
+            <td>{{ user.phoneNumber }}</td>
+            <td>{{ user.createdAt | date }}</td>
+            <td>{{ user.address }}, {{ user.city }}, {{ user.state }}, {{ user.zipCode }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteUserData(user.userId)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+    <section class="table-bottom-section">
+      <button (click)="previousPage()" [disabled]="pageNumber === 0">Previous</button>
+      <span>Page {{ pageNumber + 1 }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="pageNumber === totalPages - 1">Next</button>
+    </section>
+  </main>
+  

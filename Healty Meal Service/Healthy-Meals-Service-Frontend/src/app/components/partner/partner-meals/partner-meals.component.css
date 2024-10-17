@@ -1,0 +1,90 @@
+
+.card {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  height: 20rem !important;
+}
+
+.card-body{
+  padding: 0px .7rem 0rem .7rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image-div{
+    width: auto;
+    height: 180px;
+    margin: .7rem;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.row{
+  margin-top: 3rem;
+}
+.card-outer{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .card-img-top {
+
+
+} */
+
+.card-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+p{
+  margin-bottom: .2rem;
+}
+.card-text {
+  font-size: 0.7rem;
+  color: #6c757d;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+}
+
+.text-primary {
+  font-weight: bold;
+}
+
+.icon-actions {
+  padding-right: .7rem;
+}
+
+.icon-wrapper {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: .7rem;
+}
+
+.icon-wrapper i{
+  font-size: 18px;
+  color: #53b1f4;
+}
+
+.icon-wrapper:hover {
+  background-color: #53b1f4;
+  transform: scale(1.1);
+}
+
+.icon-wrapper:hover i {
+  color: white;
+}

@@ -1,0 +1,65 @@
+.card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 90vh;
+  }
+  
+  .stats-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    box-shadow:
+      20px 20px 60px #e6e6e6,
+      -20px -20px 60px #f3f3f3;
+      border-bottom: 10px solid rgb(63, 2, 169);
+  }
+  .heading {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .bottom-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-wrapper .star {
+    width: 30px;
+    fill: gold;
+  }
+  .bottom-wrapper .tag {
+    width: 27px;
+    fill: rgb(141, 214, 32);
+  }
+  .bottom-wrapper .thumb {
+    width: 27px;
+    fill: blueviolet;
+  }
+  .bottom-wrapper p {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  .count{
+    font-size: 4.0em !important; 
+  }
+
+  .box1{
+    border-bottom: 5px solid rgb(255, 234, 0);
+  }
+
+  .box2{
+    border-bottom: 5px solid rgb(63, 2, 169);
+  }
+
+  .box3{
+    border-bottom: 5px solid rgb(214, 0, 68);
+  }

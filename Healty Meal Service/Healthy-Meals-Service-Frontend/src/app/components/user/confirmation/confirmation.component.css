@@ -1,0 +1,51 @@
+.payment-success-page {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .success-icon {
+    color: #28a745;
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  p.lead {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  strong {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .fa-check-circle {
+    font-size: 80px;
+    color: #28a745;
+  }
+  
+  .mt-5 {
+    margin-top: 40px;
+  }
+  

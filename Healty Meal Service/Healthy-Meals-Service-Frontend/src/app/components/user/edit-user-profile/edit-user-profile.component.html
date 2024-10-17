@@ -1,0 +1,57 @@
+<div class="edit-profile-page">
+    <h2>Edit Profile</h2>
+
+    <!-- Edit Profile Form -->
+    <form (ngSubmit)="onSubmit()" class="edit-profile-form">
+        <!-- Row 1: Username, Email, Phone Number -->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="username">Username:</label>
+                <input type="text" id="username" [(ngModel)]="user.username" name="username" required
+                    class="form-control">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" [(ngModel)]="user.userEmail" name="userEmail" required
+                    class="form-control">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber"
+                    class="form-control">
+            </div>
+        </div>
+
+        <!-- Row 2: Address, City, State -->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="address">Address:</label>
+                <input type="text" id="address" [(ngModel)]="user.address" name="address" class="form-control">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="city">City:</label>
+                <input type="text" id="city" [(ngModel)]="user.city" name="city" class="form-control">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="state">State:</label>
+                <input type="text" id="state" [(ngModel)]="user.state" name="state" class="form-control">
+            </div>
+        </div>
+
+        <!-- Row 3: Zip Code -->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="zipCode">Zip Code:</label>
+                <input type="text" id="zipCode" [(ngModel)]="user.zipCode" name="zipCode" class="form-control">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Update Profile</button>
+        <h6 class="text-danger">*If you update your profile, you will get logged out automatically</h6>
+    </form>
+</div>

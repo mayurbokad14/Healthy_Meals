@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <!-- Loop through meals and display each one in a card -->
+        <div class="card-outer" *ngFor="let meal of meals">
+            <div class="card mb-4 shadow-sm">
+                <!-- Meal Image -->
+                <div class="image-div">
+                    <img [src]="meal.imageUrl || 'https://via.placeholder.com/150'" class="card-img-top"
+                        alt="Meal Image">
+                </div>
+
+                <!-- Card Content -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ meal.mealName }}</h5>
+                    <p class="card-text">{{ meal.description }}</p>
+
+                    <!-- Category and Price -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Category Badge -->
+                        <span class="badge"
+                            [ngClass]="{'bg-success': meal.category === 'veg', 'bg-danger': meal.category === 'non-veg', 'bg-warning': meal.category === 'vegan'}">
+                            {{ meal.category }}
+                        </span>
+
+                        <!-- Meal Price -->
+                        <h5 class="text-primary">{{ meal.price | currency }}</h5>
+                    </div>
+                </div>
+
+                <div class="btn-contianer">
+                    <button class="btn btn-primary align-self-center normal-btn-vm" (click)="navigateToMealInfo(meal.mealId)">
+                        View more
+                        <!-- {{ meal.inCart ? 'Remove from Cart' : 'Add to Cart' }} -->
+                    </button>
+
+                    <button class="btn btn-primary align-self-center" (click)="toggleCart(meal)" 
+                        [ngClass]="meal.inCart ? 'pressed-btn-cart' : 'normal-btn-cart'">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                        <!-- {{ meal.inCart ? 'Remove from Cart' : 'Add to Cart' }} -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

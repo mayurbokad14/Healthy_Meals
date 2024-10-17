@@ -1,0 +1,41 @@
+.meal-info-page {
+  padding: 20px;
+}
+
+.meal-image-container {
+  text-align: center;
+}
+
+.meal-image-container img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.meal-details {
+  margin-top: 20px;
+}
+
+.meal-description {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.meal-price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.badge {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.partner-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.partner-info h5 {
+  margin-bottom: 10px;
+}

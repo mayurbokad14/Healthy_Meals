@@ -1,0 +1,22 @@
+<div class="container" *ngIf="user">
+    <h1>{{ user.username }}'s Profile</h1>
+    
+    <div class="profile-info">
+      <p><span>Email:</span> {{ user.userEmail }}</p>
+      <p><span>Phone:</span> {{ user.phoneNumber }}</p>
+      <p><span>Address:</span> {{ user.address }}</p>
+      <p><span>City:</span> {{ user.city }}</p>
+      <p><span>State:</span> {{ user.state }}</p>
+      <p><span>Zip Code:</span> {{ user.zipCode }}</p>
+    </div>
+  
+    <div class="btn-container">
+      <button class="btn btn-edit" (click)="onEditProfile()">Edit Profile</button>
+      <button class="btn btn-danger" (click)="onDeleteProfile()">Delete Profile</button>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <!-- <p>Profile last updated on: {{ user.createdAt | date:'medium' }}</p> -->
+  </div>
+  

@@ -1,0 +1,40 @@
+.landing-page {
+    height: 90vh;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 0 50px;
+  }
+  
+  .landing-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .landing-text {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .landing-text h1 {
+    font-size: 4rem; /* Large text */
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .landing-text p {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #28a745; /* Green button */
+    border-color: #28a745;
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  

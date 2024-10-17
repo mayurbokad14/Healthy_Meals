@@ -1,0 +1,127 @@
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  height: 20rem !important;
+}
+
+.card-body {
+  padding: 0px 0.7rem 0rem 0.7rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image-div {
+  width: auto;
+  height: 180px;
+  margin: 0.7rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.row {
+  margin-top: 3rem;
+}
+.card-outer {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .card-img-top {
+  
+  
+  } */
+
+.card-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 0.2rem;
+}
+.card-text {
+  font-size: 0.7rem;
+  color: #6c757d;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+}
+
+.text-primary {
+  font-weight: bold;
+}
+
+.icon-actions {
+  padding-right: 0.7rem;
+}
+
+.icon-wrapper {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 0.7rem;
+}
+
+.icon-wrapper i {
+  font-size: 18px;
+  color: #53b1f4;
+}
+
+.icon-wrapper:hover {
+  background-color: #53b1f4;
+  transform: scale(1.1);
+}
+
+.icon-wrapper:hover i {
+  color: white;
+}
+
+.normal-btn-cart {
+  background-color: #fd7e14;
+  border: 2px solid #fd7e14;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+  width: 6.3rem;
+}
+.pressed-btn-cart {
+  background-color: #ecbc2b;
+  border: 2px solid #fd7e14;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+  width: 6.3rem;
+}
+
+.normal-btn-vm {
+  background-color: #aa1be8;
+  border: 2px solid #aa1be8;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+  width: 6.3rem;
+}
+.pressed-btn-vm {
+  background-color: #aa1be8;
+  border: 2px solid #ca61f7;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+  width: 6.3rem;
+}
+
+.btn-contianer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}

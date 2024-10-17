@@ -1,0 +1,12 @@
+<div class="container" *ngIf="partner">
+    <h1>{{ partner.shopName }} Profile</h1>
+    <p><strong>Partner Name:</strong> {{ partner.partnerName }}</p>
+    <p><strong>Email:</strong> {{ partner.partnerEmail }}</p>
+    <p><strong>Phone Number:</strong> {{ partner.phoneNumber }}</p>
+    <p><strong>Address:</strong> {{ partner.address }}, {{ partner.city }}, {{ partner.state }}, {{ partner.zipCode }}</p>
+    <p><strong>Shop Description:</strong> {{ partner.shopDescription }}</p>
+  
+    <button class="btn btn-primary" (click)="onEditProfile()">Edit Profile</button>
+    <button class="btn btn-danger" (click)="onDeleteProfile()">Delete Profile</button>
+  </div>
+  

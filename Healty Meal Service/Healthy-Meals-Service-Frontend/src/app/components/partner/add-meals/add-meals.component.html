@@ -1,0 +1,68 @@
+
+<div class="meal-form-container">
+    <div class="meal-form-header">
+        <h2 *ngIf="isEditMode==false"> Add a New Meal</h2>
+        <h2 *ngIf="isEditMode==true"> Update a Meal</h2>
+        <p>Fill out the form below to add a new meal to the menu.</p>
+    </div>
+
+    <form [formGroup]="mealForm" (ngSubmit)="onSubmit()" class="meal-form">
+
+        <div class="form-group">
+            <label for="mealName">Meal Name</label>
+            <input type="text" id="mealName" formControlName="mealName" class="form-control"
+                placeholder="Enter meal name" />
+            <div *ngIf="mealForm.get('mealName')?.invalid && mealForm.get('mealName')?.touched" class="error-message">
+                <small *ngIf="mealForm.get('mealName')?.hasError('required')">Meal Name is required.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="form-control"
+                placeholder="Enter meal description"></textarea>
+            <div *ngIf="mealForm.get('description')?.invalid && mealForm.get('description')?.touched"
+                class="error-message">
+                <small *ngIf="mealForm.get('description')?.hasError('required')">Description is required.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" formControlName="price" class="form-control"
+                placeholder="Enter meal price" />
+            <div *ngIf="mealForm.get('price')?.invalid && mealForm.get('price')?.touched" class="error-message">
+                <small *ngIf="mealForm.get('price')?.hasError('required')">Price is required.</small>
+                <small *ngIf="mealForm.get('price')?.hasError('min')">Price must be greater than 0.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" formControlName="category" class="form-control">
+                <option value="Veg">Vegetarian</option>
+                <option value="Non-veg">Non-vegetarian</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+            <div *ngIf="mealForm.get('category')?.invalid && mealForm.get('category')?.touched" class="error-message">
+                <small *ngIf="mealForm.get('category')?.hasError('required')">Category is required.</small>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="imageUrl">Meal Image URL (optional)</label>
+            <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control"
+                placeholder="Enter meal image URL" />
+        </div>
+
+        <div class="form-group" style="display: flex">
+            <label for="available">Is Available?</label>
+            <input type="checkbox" id="available" formControlName="available"/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" [disabled]="mealForm.invalid" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

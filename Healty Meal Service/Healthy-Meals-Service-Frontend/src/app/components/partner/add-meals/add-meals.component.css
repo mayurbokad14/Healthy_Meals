@@ -1,0 +1,95 @@
+.meal-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .meal-form-header h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .meal-form-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    /* padding: 12px 15px; */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007BFF;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:disabled {
+    background-color: #ccc;
+  }
+  
+  .btn:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* padding: 12px 15px; */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  select.form-control:focus {
+    border-color: #007BFF;
+  }
+  

@@ -1,0 +1,152 @@
+/* Container Styles */
+.registration-page {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px; /* Increased width for three-column layout */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid Layout for form rows */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 30%; /* Make three form groups fit side by side */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label Styling */
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input Styling */
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+/* Adjust textarea size */
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Navigation Pills */
+.nav-pills-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px; /* Adjusted to match form width */
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #e2e2e2;
+}
+
+.nav-item.active .nav-link {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Styling for Invalid Input Fields */
+.is-invalid {
+  border-color: #ff4d4d !important; /* Highlight invalid input field with red */
+}
+
+.is-invalid:focus {
+  border-color: #ff1a1a !important; /* More intense red border on focus */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Slight red shadow around input field */
+  outline: none; /* Remove default outline */
+}
+
+/* Styling for Error Messages */
+.error-message {
+  color: #ff4d4d; /* Red text for error messages */
+  font-size: 14px; /* Slightly smaller font */
+  margin-top: 5px; /* Space above error message */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+/* Hover and Focus States */
+input:focus.is-invalid {
+  border-color: #ff4d4d;
+}
+/*   
+  input.ng-valid {
+    border-color: #28a745 !important; 
+  }
+   */
+
+.form-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}

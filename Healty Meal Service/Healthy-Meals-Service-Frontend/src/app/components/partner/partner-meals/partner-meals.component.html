@@ -1,0 +1,80 @@
+<!-- <div class="main-container">
+    <div class="card mb-4 shadow-sm">
+       
+        
+        <div class="image-div">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/03/Sesame-salmon-purple-sprouting-broccoli-sweet-potato-mash-02-8062a36.jpg?quality=90&resize=556,505" class="card-img-top" alt="Meal Image">    
+        </div>
+    
+
+        <div class="card-body">
+            <h5 class="card-title">Grilled Chicken Salad</h5>
+            <p class="card-text">
+                A healthy mix of grilled chicken, fresh vegetables, and a light vinaigrette dressing. Perfect for a
+                nutritious and satisfying meal.
+            </p>
+    
+
+            <div class="d-flex justify-content-between align-items-center">
+   
+                <span class="badge bg-success">Non-Veg</span>
+    
+    
+                <h5 class="text-primary">$12.99</h5>
+            </div>
+        </div>
+
+
+        <div class="icon-actions d-flex justify-content-end">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- meals.component.html -->
+<div class="container">
+    <div class="row">
+      <!-- Loop through meals and display each one in a card -->
+      <div class="card-outer" *ngFor="let meal of meals">
+        <div class="card mb-4 shadow-sm">
+          <!-- Meal Image -->
+          <div class="image-div">
+            <img [src]="meal.imageUrl || 'https://via.placeholder.com/150'" class="card-img-top" alt="Meal Image">
+          </div>
+  
+          <!-- Card Content -->
+          <div class="card-body">
+            <h5 class="card-title">{{ meal.mealName }}</h5>
+            <p class="card-text">{{ meal.description }}</p>
+  
+            <!-- Category and Price -->
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- Category Badge -->
+              <span class="badge" [ngClass]="meal.category === 'Veg' ? 'bg-success' : 'bg-danger'">
+                {{ meal.category }}
+              </span>
+  
+              <!-- Meal Price -->
+              <h5 class="text-primary">{{ meal.price | currency }}</h5>
+            </div>
+          </div>
+  
+          <!-- Icons for Update and  delete-->
+          <div class="icon-actions d-flex justify-content-end" (click)="onEditMeal(meal.mealId)">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-pen"></i>
+            </div>
+            <div class="icon-wrapper" (click)="deleteMealData(meal.mealId)">
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

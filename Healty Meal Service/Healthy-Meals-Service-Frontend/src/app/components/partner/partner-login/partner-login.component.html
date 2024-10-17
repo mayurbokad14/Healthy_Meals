@@ -1,0 +1,53 @@
+<div class="login-page d-flex flex-column justify-content-center align-items-center">
+    <!-- Navigation pills for User and Partner login -->
+    <ul class="nav-pills-container">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/user/login">User Login</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="/partner/login">Partner Login</a>
+        </li>
+    </ul>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <h2>Partner Login</h2>
+
+        <!-- Username Field -->
+        <div class="form-group">
+            <label [class.text-danger]="loginForm.get('username')?.touched && loginForm.get('username')?.invalid"
+                for="username">Enter Username</label>
+            <input type="text" formControlName="username" id="username"
+                [ngClass]="{'is-invalid': loginForm.get('username')?.touched && loginForm.get('username')?.invalid}">
+            <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="error-message">
+                <small *ngIf="loginForm.get('username')?.errors?.['required']">Username is required.</small>
+            </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+            <label [class.text-danger]="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+                for="password">Enter Password</label>
+            <input type="password" formControlName="password" id="password"
+                [ngClass]="{'is-invalid': loginForm.get('password')?.touched && loginForm.get('password')?.invalid}">
+            <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-message">
+                <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</small>
+                <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+            </div>
+        </div>
+
+        <!-- Check me out -->
+        <div class="form-group check-group">
+            <input type="checkbox" id="checkMeOut" formControlName="checkMeOut">
+            <label for="checkMeOut">Check me out</label>
+        </div>
+
+        <!-- Don't have an account? -->
+        <div class="form-footer">
+            <span>Don't have an account? <a routerLink="/partner/signup">Sign Up</a></span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</div>

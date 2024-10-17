@@ -1,0 +1,19 @@
+<div class="payment-success-page container text-center">
+    <div class="card shadow-lg p-5 mt-5">
+      <div class="success-icon mb-4">
+        <i class="fa fa-check-circle text-success" style="font-size: 80px;"></i>
+      </div>
+  
+
+      <h2 class="text-primary mb-3">Your payment was successful</h2>
+      <p class="lead">Thank you for your payment.</p>
+      <p>Your transaction ID is <strong>{{ transactionId }}</strong></p>
+
+      <div class="mt-5">
+        <button class="btn btn-outline-primary btn-lg" (click)="goBackHome()">
+          <i class="fa fa-home"></i> Back to Home
+        </button>
+      </div>
+    </div>
+  </div>
+  

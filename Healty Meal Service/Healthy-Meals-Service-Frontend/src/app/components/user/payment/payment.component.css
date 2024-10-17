@@ -1,0 +1,54 @@
+.payment-page {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #fff;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  .total-amount {
+    font-size: 24px;
+  }
+  
+  .alert {
+    font-size: 16px;
+  }
+  
+  .paypal-button button {
+    background-color: #0070ba;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .cancel-button button {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #0070ba;
+    border-color: #0070ba;
+  }
+  
+  .btn-primary:hover {
+    background-color: #005b9f;
+    border-color: #005b9f;
+  }
+  
+  .btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  

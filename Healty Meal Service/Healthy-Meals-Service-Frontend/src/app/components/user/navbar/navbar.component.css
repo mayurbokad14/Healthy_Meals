@@ -1,0 +1,82 @@
+
+/* .navbar {
+    z-index: 99;
+  }
+  
+  .bg-nav-color {
+    background-color: antiquewhite;
+  }
+  
+  .cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600px;
+    text-transform: uppercase;
+  }
+  #navbarNav{
+      gap: 20px;
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
+  
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px; /* Adjust size of the logo */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #5a5a5a !important;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #28a745 !important; /* Green color for hover */
+  }
+  
+  /* .navbar-nav .nav-item {
+
+  } */
+  
+  /* Cart and profile icons */
+  .bi {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .bi:hover {
+    transform: scale(1.1);
+  }
+  

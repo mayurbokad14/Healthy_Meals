@@ -1,0 +1,42 @@
+<div class="container meal-info-page mt-4">
+    <div class="row">
+      <!-- Meal Image -->
+      <div class="col-md-6">
+        <div class="meal-image-container">
+          <img [src]="meal.mealDTO.imageUrl || 'https://via.placeholder.com/300'" class="img-fluid rounded" alt="Meal Image">
+        </div>
+      </div>
+  
+      <!-- Meal & Partner Details -->
+      <div class="col-md-6">
+        <div class="meal-details">
+          <h2>{{ meal.mealDTO.mealName }}</h2>
+          <p class="meal-description">{{ meal.mealDTO.description }}</p>
+  
+          <!-- Category and Price -->
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge" [ngClass]="meal.mealDTO.category === 'veg' ? 'bg-success' : 'bg-danger'">
+              {{ meal.mealDTO.category === 'veg' ? 'Vegetarian' : 'Non-Vegetarian' }}
+            </span>
+            <h4 class="meal-price text-primary">{{ meal.mealDTO.price | currency }}</h4>
+          </div>
+  
+          <!-- Availability -->
+          <p *ngIf="meal.mealDTO.available" class="text-success">Available</p>
+          <p *ngIf="!meal.mealDTO.available" class="text-danger">Out of Stock</p>
+  
+          <!-- Add to Cart Button -->
+          <button *ngIf="meal.mealDTO.available" class="btn btn-primary mt-3" (click)="addToCart(meal.mealDTO.mealId)">
+            <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+          </button>
+  
+          <!-- Partner Information -->
+          <div class="partner-info mt-4">
+            <h5>Restaurant: {{ meal.partnerDTO.shopName }}</h5>
+            <p>Owner: {{ meal.partnerDTO.partnerName }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

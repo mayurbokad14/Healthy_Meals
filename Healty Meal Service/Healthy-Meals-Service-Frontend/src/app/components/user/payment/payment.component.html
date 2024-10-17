@@ -1,0 +1,32 @@
+<div class="payment-page container text-center">
+    <div class="card shadow-lg p-4 mt-5">
+      <h2 class="text-primary mb-4">Payment Summary</h2>
+  
+      <!-- Total Amount Section -->
+      <div class="total-amount mb-3">
+        <h4>Total Amount: <span class="text-success">{{ totalAmount | currency }}</span></h4>
+      </div>
+  
+      <!-- Warning Message -->
+      <div class="alert alert-warning" role="alert">
+        <strong>Important:</strong> Please do not refresh the browser while the transaction is processing.
+      </div>
+  
+      <!-- PayPal Button -->
+      <!-- <div class="paypal-button my-4">
+        <button class="btn btn-primary btn-lg w-100">
+          <i class="fa fa-paypal"></i> Pay with PayPal
+        </button>
+      </div> -->
+
+      <div #paymentRef></div>
+  
+      <!-- Cancel Button -->
+      <div class="cancel-button">
+        <button class="btn btn-outline-danger btn-lg w-100" (click)="cancelPayment()">
+          <i class="fa fa-times"></i> Cancel Payment
+        </button>
+      </div>
+    </div>
+  </div>
+  
